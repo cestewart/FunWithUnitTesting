@@ -13,7 +13,17 @@ namespace FunWithUnitTesting
 
         public void Execute(int quantity)
         {
-            Console.WriteLine($"Show Fizz Buzz {quantity} times.");
+            for (var i = 1; i <= quantity; i++)
+            {
+                Console.WriteLine(GetFizzBuzzMessage(i));
+            }
+        }
+
+        public virtual string GetFizzBuzzMessage(int number)
+        {
+            if (_fizzBuzzMath.IsDivisibleByThree(number) && _fizzBuzzMath.IsDivisibleByFive(number)) return "FizzBuzz";
+            if (_fizzBuzzMath.IsDivisibleByThree(number)) return "Fizz";
+            return _fizzBuzzMath.IsDivisibleByFive(number) ? "Buzz" : number.ToString();
         }
     }
 }

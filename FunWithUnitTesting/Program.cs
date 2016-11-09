@@ -6,7 +6,7 @@ namespace FunWithUnitTesting
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var kernel = new StandardKernel();
             kernel.Load(Assembly.GetExecutingAssembly());
