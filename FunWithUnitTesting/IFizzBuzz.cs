@@ -2,6 +2,6 @@
 {
     public interface IFizzBuzz
     {
-        void Execute(int quantity);
+        void Execute();
     }
 }

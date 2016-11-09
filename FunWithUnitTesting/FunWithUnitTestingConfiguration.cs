@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace FunWithUnitTesting
 {
-    class FunWithUnitTestingConfiguration
+    public class FunWithUnitTestingConfiguration : IFunWithUnitTestingConfiguration
     {
+        public int RunTimes => Convert.ToInt32(ConfigurationManager.AppSettings.Get("RunTimes"));
     }
 }

@@ -38,6 +38,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,8 +51,10 @@
     <Compile Include="Bindings.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="FizzBuzzMath.cs" />
+    <Compile Include="FunWithUnitTestingConfiguration.cs" />
     <Compile Include="IFizzBuzz.cs" />
     <Compile Include="IFizzBuzzMath.cs" />
+    <Compile Include="IFunWithUnitTestingConfiguration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

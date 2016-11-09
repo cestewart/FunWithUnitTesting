@@ -4,16 +4,18 @@ namespace FunWithUnitTesting
 {
     public class FizzBuzz : IFizzBuzz
     {
+        private readonly IFunWithUnitTestingConfiguration _funWithUnitTestingConfiguration;
         private readonly IFizzBuzzMath _fizzBuzzMath;
 
-        public FizzBuzz(IFizzBuzzMath fizzBuzzMath)
+        public FizzBuzz(IFunWithUnitTestingConfiguration funWithUnitTestingConfiguration, IFizzBuzzMath fizzBuzzMath)
         {
+            _funWithUnitTestingConfiguration = funWithUnitTestingConfiguration;
             _fizzBuzzMath = fizzBuzzMath;
         }
 
-        public void Execute(int quantity)
+        public void Execute()
         {
-            for (var i = 1; i <= quantity; i++)
+            for (var i = 1; i <= _funWithUnitTestingConfiguration.RunTimes; i++)
             {
                 Console.WriteLine(GetFizzBuzzMessage(i));
             }

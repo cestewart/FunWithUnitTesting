@@ -13,7 +13,7 @@ namespace FunWithUnitTesting
 
             var fizzBuzz =  kernel.Get<IFizzBuzz>();
 
-            fizzBuzz.Execute(100);
+            fizzBuzz.Execute();
 
             Console.WriteLine("Finished...press any key to exit.");
             Console.ReadKey();
